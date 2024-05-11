@@ -1,9 +1,9 @@
 import React from 'react'
-import ModalWrapper from './ModalWrapper'
 import { LiaTimesSolid } from 'react-icons/lia'
 import { BiErrorCircle } from "react-icons/bi";
 import { StoreContext } from '../../../store/StoreContext';
 import { setError } from '../../../store/StoreAction';
+import ModalWrapper from '../ModalWrapper';
 
 
 const ModalError = ({position}) => {

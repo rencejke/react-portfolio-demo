@@ -3,23 +3,34 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Roboto-bold';
-  src: url(/fonts/roboto-bold.woff) format("woff"),
-  url(/fonts/roboto-bold.woff2) format("woff2");
+  font-family: "Poppins-Black";
+  src: url(/fonts/Poppins-Black.woff) format("woff"),
+  url(/fonts/Poppins-Black.woff2) format("woff2");
+
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto-regular';
-  src: url(/fonts/roboto-regular.woff) format("woff"),
-  url(/fonts/roboto-regular.woff2) format("woff2");
+  font-family: "Poppins-Regular";
+  src: url(/fonts/Poppins-Regular.woff) format("woff"),
+  url(/fonts/Poppins-Regular.woff2) format("woff2");
+
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto-medium';
-  src: url(/fonts/roboto-medium.woff) format("woff"),
-  url(/fonts/roboto-medium.woff2) format("woff2");
+  font-family: "Poppins-Bold";
+  src: url(/fonts/Poppins-Bold.woff) format("woff"),
+  url(/fonts/Poppins-Bold.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(/fonts/Poppins-Medium.woff) format("woff"),
+  url(/fonts/Poppins-Medium.woff2) format("woff2");
+
   font-display: swap;
 }
 
@@ -55,6 +66,11 @@
     font-regular;
   }
 
+  .container
+      {
+        @apply max-w-[1500px] w-full mx-auto px-4
+      }
+      
   a{
     @apply
     text-content
@@ -319,6 +335,22 @@
   .loading-bar::after {
     @apply content-[''] absolute top-0 left-0 w-[180%] h-full  bg-gradient-to-r from-transparent via-black/40 to-transparent  animate-loading;
   }
+  
+  .btn
+    {
+        @apply bg-[#76ABAE] p-2 font-regular transition-all
+        hover:bg-transparent border border-[#76ABAE] hover:text-[#76ABAE]
+    }
+
+    .header ul li 
+    {
+      @apply hover:text-[#76ABAE]
+    }
+
+    .active
+    {
+      @apply text-[#76ABAE]
+    }
 
 }
 
@@ -379,4 +411,5 @@ input[type=number] {
   100% {
     stroke-dashoffset: -110px;
   }
+
 }

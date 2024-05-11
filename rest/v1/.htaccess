@@ -15,3 +15,25 @@ RewriteRule ^portfolio/([0-9]+)$ controllers/portfolio/portfolio.php?portfolioid
 RewriteRule ^portfolio/active/([0-9]+)$ controllers/portfolio/active.php?portfolioid=$1 [L]
 RewriteRule ^portfolio/search$ controllers/portfolio/search.php [L]
 
+
+### SETTING ROLES ###
+RewriteRule ^banner$ controllers/banner/banner.php [L]
+RewriteRule ^banner/([0-9]+)$ controllers/banner/banner.php?bannerid=$1 [L]
+RewriteRule ^banner/active/([0-9]+)$ controllers/banner/active.php?bannerid=$1 [L]
+RewriteRule ^banner/search$ controllers/banner/search.php [L]
+
+
+
+### SETTING ROLES ###
+RewriteRule ^about$ controllers/about/about.php [L]
+RewriteRule ^about/([0-9]+)$ controllers/about/about.php?aboutid=$1 [L]
+RewriteRule ^about/active/([0-9]+)$ controllers/about/active.php?aboutid=$1 [L]
+RewriteRule ^about/search$ controllers/about/search.php [L]
+
+
+### SETTING ROLES ###
+RewriteRule ^exp$ controllers/exp/exp.php [L]
+RewriteRule ^exp/([0-9]+)$ controllers/exp/exp.php?expid=$1 [L]
+RewriteRule ^exp/active/([0-9]+)$ controllers/exp/active.php?expid=$1 [L]
+# RewriteRule ^exp/search$ controllers/exp/search.php [L]
+

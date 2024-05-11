@@ -1,13 +1,13 @@
 import React from 'react'
-import ModalWrapper from './ModalWrapper'
 import { LiaTimesSolid, LiaTrashAltSolid } from 'react-icons/lia'
 import { BiErrorCircle } from 'react-icons/bi'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { queryData } from '../../helpers/queryData'
 import { StoreContext } from '../../../store/StoreContext'
 import { setIsDelete, setSuccess, setMessage } from '../../../store/StoreAction'
+import ModalWrapper from '../ModalWrapper'
 
-const ModalConfirmed = ({position, endpoint, queryKey}) => {
+const ModalDelete = ({position, endpoint, queryKey}) => {
   const {store, dispatch} = React.useContext(StoreContext)
   const handleClose = () => dispatch(setIsDelete(flase))
 
@@ -60,4 +60,4 @@ const ModalConfirmed = ({position, endpoint, queryKey}) => {
   )
 }
 
-export default ModalConfirmed
+export default ModalDelete

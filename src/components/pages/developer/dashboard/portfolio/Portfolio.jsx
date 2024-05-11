@@ -48,7 +48,7 @@ const Portfolio = () => {
         <div className='flex relative'>
             <div className={`main-wrapper transition-all px-4 py-3 max-h-[calc(100vh - 65px)] w-full `}>
                 <div className='flex justify-between items-center'>
-                    <h1>Student Database</h1>
+                    <h1 className='uppercase'>Portfolio Section</h1>
                     {/* <Searchbar setIsSeach={setIsSeach} setKeyword={setKeyword}/> */}
                 </div>
             

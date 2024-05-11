@@ -1,5 +1,4 @@
 import React from 'react'
-import ModalWrapper from '../../../../partials/modals/ModalWrapper'
 import { LiaTimesSolid } from 'react-icons/lia'
 import { Formik, Form } from 'formik'
 import { InputText, InputTextArea } from '../../../../helpers/FormInputs'
@@ -9,6 +8,7 @@ import { StoreContext } from '../../../../../store/StoreContext'
 import * as Yup from 'yup'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { queryData } from '../../../../helpers/queryData'
+import ModalWrapper from '../../../../partials/ModalWrapper'
 
 const ModalAddPortfolio = ({itemEdit}) => {
     const {store, dispatch} = React.useContext(StoreContext)

@@ -1,5 +1,4 @@
 import React from 'react'
-import ModalWrapper from './ModalWrapper'
 import { LiaTimesSolid, LiaTrashAltSolid } from 'react-icons/lia'
 import { BiErrorCircle } from 'react-icons/bi'
 import { PiArchive } from "react-icons/pi";
@@ -7,6 +6,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { queryData } from '../../helpers/queryData';
 import { StoreContext, StoreProvider } from '../../../store/StoreContext';
 import { setIsActive, setSuccess, setMessage } from '../../../store/StoreAction';
+import ModalWrapper from '../ModalWrapper';
 
 
 const ModalConfirmed = ({position, endpoint, queryKey, isArchiving}) => {

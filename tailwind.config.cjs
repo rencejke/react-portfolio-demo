@@ -39,9 +39,10 @@ export default {
       },
 
       fontFamily: {
-        regular: "Roboto-regular",
-        thick: "Roboto-medium",
-        thicker: "Roboto-bold"
+        black: "Poppins-Black",
+        regular: "Poppins-Regular",
+        thick: "Poppins-Medium",
+        thicker: "Poppins-Bold"
       },
 
       keyframes: {

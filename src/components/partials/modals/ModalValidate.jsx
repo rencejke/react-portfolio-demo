@@ -1,7 +1,7 @@
 import React from 'react'
-import ModalWrapper from './ModalWrapper'
 import { LiaTimesSolid } from 'react-icons/lia'
 import { BiErrorCircle } from "react-icons/bi";
+import ModalWrapper from '../ModalWrapper';
 
 
 const ModalValidate = ({position}) => {
