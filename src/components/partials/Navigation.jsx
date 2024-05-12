@@ -19,11 +19,15 @@ const Navigation = () => {
     <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
       <div className='flex items-center gap-4'>
         <Logo/>
-        <h1 className='mb-0'>School</h1>
+        <h1 className='mb-0'>Clarence</h1>
       </div>
       
   
       <ul className='nav'>
+      <li className={`nav-link ${activeLink === '/dashboard' ? 'active' : ''}`}>
+          <Link to="/dashboard" onClick={() => handleLinkClick('/dashboard')}><MdOutlineDashboard />Dashboard</Link>
+        </li>
+        
       <li className={`nav-link ${activeLink === '/portfolio' ? 'active' : ''}`}>
           <Link to="/portfolio" onClick={() => handleLinkClick('/portfolio')}><MdOutlineDashboard />Portfolio</Link>
         </li>

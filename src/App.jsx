@@ -6,6 +6,7 @@ import Home from "./components/pages/developer/ui/Home"
 import Banner from "./components/pages/developer/dashboard/banner/Banner"
 import About from "./components/pages/developer/dashboard/about/About"
 import Exp from "./components/pages/developer/dashboard/exp/Exp"
+import Welcome from "./components/pages/developer/dashboard/welcome/Welcome"
 
 function App() {
   const queryClient = new QueryClient
@@ -16,6 +17,7 @@ function App() {
     <StoreProvider>
       <Router>
         <Routes>
+        <Route path="/dashboard" element={<Welcome/>}/>
         <Route path="/portfolio" element={<Portfolio/>}/>
         <Route path="/banner" element={<Banner/>}/>
         <Route path="/about" element={<About/>}/>

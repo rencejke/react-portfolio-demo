@@ -352,6 +352,19 @@
       @apply text-[#76ABAE]
     }
 
+    .item-cards
+    {
+      @apply bg-gray-500/20 p-8 items-center rounded-md mt-8
+    }
+    .item-cards h4
+    {
+      @apply text-3xl
+    }
+    .item-cards span
+    {
+      @apply flex gap-2 items-center
+    }
+
 }
 
 /* scrollbar of overflow */
