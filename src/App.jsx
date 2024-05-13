@@ -9,6 +9,7 @@ import Exp from "./components/pages/developer/dashboard/exp/Exp"
 import Welcome from "./components/pages/developer/dashboard/welcome/Welcome"
 import Projects from "./components/pages/developer/dashboard/projects/Projects"
 import Contact from "./components/pages/developer/dashboard/contact/Contact"
+import Services from "./components/pages/developer/dashboard/services/Services"
 
 function App() {
   const queryClient = new QueryClient
@@ -26,7 +27,7 @@ function App() {
         <Route path="/experience" element={<Exp/>}/>
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/services" element={<Contact/>}/>
+        <Route path="/services" element={<Services/>}/>
 
         {/* // */}
         <Route path="/home" element={<Home/>}/>

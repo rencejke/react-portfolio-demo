@@ -6,10 +6,10 @@ import { PiArchive } from 'react-icons/pi'
 import SpinnerFetching from '../../../../partials/spinners/SpinnerFetching'
 import { StoreContext } from '../../../../../store/StoreContext'
 import { setIsActive, setIsAdd, setIsDelete } from '../../../../../store/StoreAction'
-import ModalProjectsConfirmed from '../../../../partials/modalsProject/ModalProjectsConfirmed'
-import ModalDeleteProjects from '../../../../partials/modalsProject/ModalDeleteProjects'
+import ModalDeleteservices from '../../../../partials/modalsProject/ModalDeleteservices'
+import ModalServicesConfirmed from '../../../../partials/modalServices/ModalServicesConfirmed'
 
-const ServicesTable = ({setItemEdit, isLoading, isFetching, projects}) => {
+const ServicesTable = ({setItemEdit, isLoading, isFetching, services}) => {
     const {store, dispatch} = React.useContext(StoreContext)
     const [isArchiving, setIsArchiving] = React.useState(0);
     const [id, setId] = React.useState('');
@@ -26,18 +26,18 @@ const ServicesTable = ({setItemEdit, isLoading, isFetching, projects}) => {
     // archive is here
     const handleActive = (item) => {
         dispatch(setIsActive(true));
-        setId(item.projects_aid);
+        setId(item.services_aid);
         setIsArchiving(0);
     }
     const handleRestore = (item) => {
         dispatch(setIsActive(true));
-        setId(item.projects_aid);
+        setId(item.services_aid);
         setIsArchiving(1);
     }
 
     const handleDelete = (item) => {
         dispatch(setIsDelete(true));
-        setId(item.projects_aid);
+        setId(item.services_aid);
     }
 
   return (
@@ -48,12 +48,10 @@ const ServicesTable = ({setItemEdit, isLoading, isFetching, projects}) => {
                         <thead className='sticky top-0 relative z-10 bg-primary'>
                             <tr>
                                 <th className='w-[20px]'>#</th>
-                                <th className='w-[80px]'>Project Number</th>
-                                <th className='w-[80px]'>Title</th>
+                                <th className='w-[80px]'>Type</th>
                                 <th className='w-[80px]'>Image</th>
                                 <th className='w-[80px]'>Description</th>
                                 <th className='w-[80px]'>Button Title</th>
-                                <th className='w-[80px]'>Data AOS Animation</th>
                                 <th className='w-[120px]'>Action</th>
                             </tr>
                         </thead>
@@ -67,27 +65,25 @@ const ServicesTable = ({setItemEdit, isLoading, isFetching, projects}) => {
                 </tr>)
                 }
 
-                {projects?.data.length === 0 && (
+                {services?.data.length === 0 && (
                     <tr>
                         <td colSpan={9}>
                             <NoData/>
                         </td>
                     </tr>
                 )}
-                    {projects?.data.map((item, key) => (
+                    {services?.data.map((item, key) => (
                         <tr key={key}>
                         <td>{counter++}</td>
-                        <td>{item.projects_num}</td>
-                        <td>{item.projects_title}</td>
-                        <td>{item.projects_image}</td>
-                        <td>{item.projects_description}</td>
-                        <td>{item.projects_btn_title}</td>
-                        <td>{item.projects_animation}</td>
+                        <td>{item.services_type}</td>
+                        <td>{item.services_image}</td>
+                        <td>{item.services_description}</td>
+                        <td>{item.services_btn_title}</td>
                         
                         
                         <td className='table-action'>
                         <ul>
-                            {item.projects_is_active ? (
+                            {item.services_is_active ? (
                                 <>
                                     <li><button className="tooltip" data-tooltip="Edit" onClick={()=>handleEdit(item)}><LiaEdit/></button></li>
                                     <li><button className="tooltip" data-tooltip="Archive" onClick={()=>handleActive(item)}><PiArchive /></button></li>
@@ -108,9 +104,9 @@ const ServicesTable = ({setItemEdit, isLoading, isFetching, projects}) => {
                     </table>
                 </div>
 
-                {store.isActive && <ModalProjectsConfirmed position="center"  queryKey="projects" endpoint={`/v1/projects/active/${id}`} isArchiving={isArchiving}/>}
+                {store.isActive && <ModalServicesConfirmed position="center"  queryKey="services" endpoint={`/v1/services/active/${id}`} isArchiving={isArchiving}/>}
 
-                {store.isDelete && <ModalDeleteProjects position="center"  queryKey="projects" endpoint={`/v1/projects/${id}`} />} 
+                {store.isDelete && <ModalDeleteservices position="center"  queryKey="services" endpoint={`/v1/services/${id}`} />} 
     </>
   )
 }

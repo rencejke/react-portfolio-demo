@@ -51,7 +51,7 @@ const Navigation = () => {
         </li>
 
         <li className={`nav-link ${activeLink === '/services' ? 'active' : ''}`}>
-          <Link to="/services" onClick={() => handleLinkClick('/services')}><MdOutlineDashboard />Contact</Link>
+          <Link to="/services" onClick={() => handleLinkClick('/services')}><MdOutlineDashboard />Services</Link>
         </li>
        
       </ul>
