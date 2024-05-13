@@ -37,3 +37,20 @@ RewriteRule ^exp/([0-9]+)$ controllers/exp/exp.php?expid=$1 [L]
 RewriteRule ^exp/active/([0-9]+)$ controllers/exp/active.php?expid=$1 [L]
 # RewriteRule ^exp/search$ controllers/exp/search.php [L]
 
+### SETTING ROLES ###
+RewriteRule ^projects$ controllers/projects/projects.php [L]
+RewriteRule ^projects/([0-9]+)$ controllers/projects/projects.php?projectsid=$1 [L]
+RewriteRule ^projects/active/([0-9]+)$ controllers/projects/active.php?projectsid=$1 [L]
+RewriteRule ^projects/search$ controllers/projects/search.php [L]
+
+### SETTING ROLES ###
+RewriteRule ^contact$ controllers/contact/contact.php [L]
+RewriteRule ^contact/([0-9]+)$ controllers/contact/contact.php?contactid=$1 [L]
+RewriteRule ^contact/active/([0-9]+)$ controllers/contact/active.php?contactid=$1 [L]
+RewriteRule ^contact/search$ controllers/contact/search.php [L]
+
+### SETTING ROLES ###
+RewriteRule ^services$ controllers/services/services.php [L]
+RewriteRule ^services/([0-9]+)$ controllers/services/services.php?servicesid=$1 [L]
+RewriteRule ^services/active/([0-9]+)$ controllers/services/active.php?servicesid=$1 [L]
+RewriteRule ^services/search$ controllers/services/search.php [L]

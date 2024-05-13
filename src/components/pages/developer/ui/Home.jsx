@@ -11,6 +11,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import UiAbout from './about/UiAbout';
 import UiExperiences from './experiences/UiExperiences';
+import UiProjects from './project/UiProjects';
 
 AOS.init();
 
@@ -33,7 +34,7 @@ const Home = () => {
 <>
    
 
-           <div className='bg-[#222831] h-[100vh] relative'>
+           <div className='bg-[#222831] h-[100dvh] relative'>
             {
                 showImg ? (<div className='flex justify-center items-center mx-auto pt-[23rem]'>
                 
@@ -49,6 +50,7 @@ const Home = () => {
         </div>
         <UiAbout />
         <UiExperiences/>
+        <UiProjects/>
       
    
 

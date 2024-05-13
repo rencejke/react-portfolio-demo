@@ -2,7 +2,7 @@ import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const WelcomeTable = ({banner, about, exp, project}) => {
+const WelcomeTable = ({banner, about, exp, projects, contact}) => {
 
   return (
     <>
@@ -27,8 +27,14 @@ const WelcomeTable = ({banner, about, exp, project}) => {
 
                                 <div className='item-cards'>
                                     <h3>No. of Project Info</h3>
-                                    <h4>0</h4>
-                                    <Link to="/project" className='hover:text-accent'><span>View Details<FaLongArrowAltRight /></span></Link>
+                                    <h4>{projects?.data.length}</h4>
+                                    <Link to="/projects" className='hover:text-accent'><span>View Details<FaLongArrowAltRight /></span></Link>
+                                </div>
+
+                                <div className='item-cards'>
+                                    <h3>No. of Inquiries</h3>
+                                    <h4>{contact?.data.length}</h4>
+                                    <Link to="/contact" className='hover:text-accent'><span>View Details<FaLongArrowAltRight /></span></Link>
                                 </div>
                             </div>
     </>

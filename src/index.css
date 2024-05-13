@@ -58,6 +58,20 @@
   --warning: 177 130 47;
 }
 
+label
+{
+  @apply font-regular uppercase text-[1rem] 
+}
+
+input
+{
+  @apply h-[40px] p-2 font-regular text-black
+}
+textarea
+{
+  @apply h-[130px] p-2 font-regular text-black
+} 
+
 @layer base {
   body {
     @apply

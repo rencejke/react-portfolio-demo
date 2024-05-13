@@ -46,10 +46,10 @@ const UiBanner = () => {
            </div>
         
            <div className='image self-center' data-aos="fade-left"  data-aos-duration="1000">
-            <img src={item.banner_image} alt="" className='size-[638px] object-contain hidden md:block '/>
+            <img src={item.banner_image} alt="" className='size-[86%] object-contain hidden md:block '/>
            </div>
 
-           <div className='absolute  md:right-[20vh] md:bottom-[30vh] top-[50vh]'>
+           <div className='absolute  md:right-[31vh] md:bottom-[30vh] top-[50vh]'>
             <ul className='mt-3 flex md:flex-col flex-row gap-5'>
                
                <li><Link className='flex flex-row items-center gap-2 text-[30px] 

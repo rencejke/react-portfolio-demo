@@ -30,6 +30,23 @@ const Welcome = () => {
         "exp", // key
       );
 
+      
+      const {
+        data: projects, 
+      } = useQueryData(
+        "/v1/projects", // endpoint
+        "get", // method
+        "projects", // key
+      );
+
+      const {
+        data: contact, 
+      } = useQueryData(
+        "/v1/contact", // endpoint
+        "get", // method
+        "contact", // key
+      );
+
 
   return (
     <>
@@ -56,7 +73,7 @@ const Welcome = () => {
                 {/* </div> */}
                     {/* table here */}
                     {/* <ExpTable isLoading={isLoading} exp={exp} isFetching={isFetching} setItemEdit={setItemEdit}/> */}
-                    <WelcomeTable banner={banner}  about={about} exp={exp}/>
+                    <WelcomeTable banner={banner} about={about} exp={exp} projects={projects} contact={contact}/>
             </div>
              {/* database info */}
         </div>
