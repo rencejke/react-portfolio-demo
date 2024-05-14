@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import useQueryData from '../../../../custom-hook/useQueryData';
 import { StoreContext } from '../../../../../store/StoreContext';
+import { devBaseImgUrl } from '../../../../helpers/functions-general';
 
 const UiAbout = () => {
    
@@ -40,7 +41,7 @@ const UiAbout = () => {
     <div className='wrapper grid grid-cols-2 gap-5'>
 
       <div className='image'>
-      <img src={item.about_image} alt="" className='size-[80%] object-contain' data-aos="fade-right" data-aos-duration="1000"/>
+      <img src={`${devBaseImgUrl}/${item.about_image}`} alt="" className='size-[80%] object-contain' data-aos="fade-right" data-aos-duration="1000"/>
       </div>
 
       <div className='text  text-justify'>

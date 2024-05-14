@@ -6,9 +6,9 @@ import useQueryData from '../../../../custom-hook/useQueryData'
 import { setIsAdd } from '../../../../../store/StoreAction'
 import { StoreContext } from '../../../../../store/StoreContext'
 import Toast from '../../../../partials/Toast'
-import ModalErrorContact from '../../../../partials/modalsContact/ModalErrorContact'
 import ModalAddContact from './ModalAddContact'
 import ContactTable from './ContactTable'
+import ModalError from '../../../../partials/modals/ModalError'
 
 const Contact = () => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -68,7 +68,7 @@ const Contact = () => {
         </main>
 
         {store.isAdd && <ModalAddContact  itemEdit={itemEdit}/>}
-        {store.error && <ModalErrorContact position='center'/>}
+        {store.error && <ModalError position='center'/>}
         {store.success && <Toast />}
     </section>
 

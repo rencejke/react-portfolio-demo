@@ -6,8 +6,8 @@ import { PiArchive } from 'react-icons/pi'
 import SpinnerFetching from '../../../../partials/spinners/SpinnerFetching'
 import { StoreContext } from '../../../../../store/StoreContext'
 import { setIsActive, setIsAdd, setIsDelete } from '../../../../../store/StoreAction'
-import ModalConfirmedBanner from '../../../../partials/modalsBanner/ModalConfirmedBanner'
-import ModalDeleteBanner from '../../../../partials/modalsBanner/ModalDeleteBanner'
+import ModalConfirmed from '../../../../partials/modals/ModalConfirmed'
+import ModalDelete from '../../../../partials/modals/ModalDelete'
 
 const BannerTable = ({setItemEdit, isLoading, isFetching, banner}) => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -106,9 +106,9 @@ const BannerTable = ({setItemEdit, isLoading, isFetching, banner}) => {
                     </table>
                 </div>
 
-                {store.isActive && <ModalConfirmedBanner position="center"  queryKey="banner" endpoint={`/v1/banner/active/${id}`} isArchiving={isArchiving}/>}
+                {store.isActive && <ModalConfirmed position="center"  queryKey="banner" endpoint={`/v1/banner/active/${id}`} isArchiving={isArchiving}/>}
 
-                {store.isDelete && <ModalDeleteBanner position="center"  queryKey="banner" endpoint={`/v1/banner/${id}`} />} 
+                {store.isDelete && <ModalDelete position="center"  queryKey="banner" endpoint={`/v1/banner/${id}`} />} 
     </>
   )
 }

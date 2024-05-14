@@ -9,6 +9,8 @@ Header set Access-Control-Allow-Origin *
 
 #################################### ALL FOR DEVELOPER #################################
 
+RewriteRule ^upload/photo$ core/upload-photo.php [L]
+
 ### SETTING ROLES ###
 RewriteRule ^portfolio$ controllers/portfolio/portfolio.php [L]
 RewriteRule ^portfolio/([0-9]+)$ controllers/portfolio/portfolio.php?portfolioid=$1 [L]
@@ -54,3 +56,10 @@ RewriteRule ^services$ controllers/services/services.php [L]
 RewriteRule ^services/([0-9]+)$ controllers/services/services.php?servicesid=$1 [L]
 RewriteRule ^services/active/([0-9]+)$ controllers/services/active.php?servicesid=$1 [L]
 RewriteRule ^services/search$ controllers/services/search.php [L]
+
+
+### SETTING ROLES ###
+RewriteRule ^cta$ controllers/cta/cta.php [L]
+RewriteRule ^cta/([0-9]+)$ controllers/cta/cta.php?ctaid=$1 [L]
+RewriteRule ^cta/active/([0-9]+)$ controllers/cta/active.php?ctaid=$1 [L]
+RewriteRule ^cta/search$ controllers/cta/search.php [L]

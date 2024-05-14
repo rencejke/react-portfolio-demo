@@ -262,7 +262,6 @@ textarea
     rounded-md
     text-sm
     transition-colors
-    flex
     items-center
     gap-2
   }

@@ -8,7 +8,7 @@ import { StoreContext } from '../../../../../store/StoreContext'
 import Toast from '../../../../partials/Toast'
 import ExpTable from './ExpTable'
 import ModalAddExp from './ModalAddExp'
-import ModalErrorEXP from '../../../../partials/modalsExperiences/ModalErrorEXP'
+import ModalError from '../../../../partials/modals/ModalError'
 
 const Exp = () => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -65,7 +65,7 @@ const Exp = () => {
         </main>
 
         {store.isAdd && <ModalAddExp itemEdit={itemEdit}/>}
-        {store.error && <ModalErrorEXP position='center'/>}
+        {store.error && <ModalError position='center'/>}
         {store.success && <Toast />}
     </section>
 

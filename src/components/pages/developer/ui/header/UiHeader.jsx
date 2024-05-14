@@ -39,7 +39,7 @@ const UiHeader = () => {
                         <li><HashLink  smooth to="#experiences">Experiences</HashLink></li>
                         <li><HashLink  smooth to="#portfolio">Portfolio</HashLink></li>
                         <li><HashLink  smooth to="#services">Services</HashLink></li>
-                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/contacts">Contact</Link></li>
         </ul>
         <button className='btn px-4'><Link to="">Let's Talk</Link></button>
     </div>

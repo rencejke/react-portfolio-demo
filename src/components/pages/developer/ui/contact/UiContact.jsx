@@ -7,6 +7,8 @@ import { queryData } from '../../../../helpers/queryData'
 import { Formik, Form, useFormik } from 'formik'
 import { InputText, InputTextArea } from '../../../../helpers/FormInputs'
 import SpinnerButton from '../../../../partials/spinners/SpinnerButton'
+import UiHeader from '../header/UiHeader'
+import UiFooter from '../footer/UiFooter'
 
 const UiContact = () => {
   const {store, dispatch} = React.useContext(StoreContext)
@@ -55,6 +57,11 @@ const UiContact = () => {
    })
 
   return (
+   <>
+      
+
+      <UiHeader/>
+
     <div className='bg-[#222831] text-white'>
     <section className='contact p-12 mx-auto w-[50%] '>
     <div className="container bg-[#76ABAE] p-12 rounded-xl">
@@ -139,8 +146,10 @@ const UiContact = () => {
   </section>
   {/* <Footer /> */}
      
-
+ <UiFooter/>
     </div>
+
+   </>
   )
 }
 

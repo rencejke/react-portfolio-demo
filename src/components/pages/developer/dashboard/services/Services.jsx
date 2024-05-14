@@ -8,8 +8,8 @@ import { setIsAdd } from '../../../../../store/StoreAction'
 import { StoreContext } from '../../../../../store/StoreContext'
 import Toast from '../../../../partials/Toast'
 import ModalAddServices from './ModalAddServices'
-import ModalErrorServices from '../../../../partials/modalServices/ModalErrorServices'
 import ServicesTable from './ServicesTable'
+import ModalError from '../../../../partials/modals/ModalError'
 
 const Services = () => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -69,7 +69,7 @@ const Services = () => {
         </main>
 
         {store.isAdd && <ModalAddServices  itemEdit={itemEdit}/>}
-        {store.error && <ModalErrorServices position='center'/>}
+        {store.error && <ModalError position='center'/>}
         {store.success && <Toast />}
     </section>
 

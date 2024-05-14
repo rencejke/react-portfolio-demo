@@ -7,9 +7,9 @@ import useQueryData from '../../../../custom-hook/useQueryData'
 import { setIsAdd } from '../../../../../store/StoreAction'
 import { StoreContext } from '../../../../../store/StoreContext'
 import Toast from '../../../../partials/Toast'
-import ModalErrorProjects from '../../../../partials/modalsProject/ModalErrorProjects'
 import ModalAddProjects from './ModalAddProjects'
 import ProjectsTable from './ProjectsTable'
+import ModalError from '../../../../partials/modals/ModalError'
 
 const Projects = () => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -69,7 +69,7 @@ const Projects = () => {
         </main>
 
         {store.isAdd && <ModalAddProjects  itemEdit={itemEdit}/>}
-        {store.error && <ModalErrorProjects position='center'/>}
+        {store.error && <ModalError position='center'/>}
         {store.success && <Toast />}
     </section>
 

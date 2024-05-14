@@ -2,6 +2,7 @@ import React from 'react'
 import AOS from 'aos';
 import { StoreContext } from '../../../../../store/StoreContext';
 import useQueryData from '../../../../custom-hook/useQueryData';
+import { devBaseImgUrl } from '../../../../helpers/functions-general';
 
 // ..
 AOS.init();
@@ -36,7 +37,7 @@ const {
         item.exp_is_active === 1 && (
         <div className="item bg-[#31363F]/50 transition-all hover:bg-[#76ABAE]  mx-auto p-12 rounded-md mb-3"
          data-aos={item.exp_image_animation} data-aos-duration="1000">
-          <img src={item.exp_image} alt="" className='size-[90px]'/>
+          <img src={`${devBaseImgUrl}/${item.exp_image}`} alt="" className='size-[90px]'/>
         </div>)
         ))}
 

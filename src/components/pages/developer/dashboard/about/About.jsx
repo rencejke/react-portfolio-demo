@@ -8,7 +8,7 @@ import useQueryData from '../../../../custom-hook/useQueryData'
 import { setIsAdd } from '../../../../../store/StoreAction'
 import { StoreContext } from '../../../../../store/StoreContext'
 import Toast from '../../../../partials/Toast'
-import ModalErrorAbout from '../../../../partials/modalsAbout/ModalErrorAbout'
+import ModalError from '../../../../partials/modals/ModalError'
 
 const About = () => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -68,7 +68,7 @@ const About = () => {
         </main>
 
         {store.isAdd && <ModalAddAbout itemEdit={itemEdit}/>}
-        {store.error && <ModalErrorAbout position='center'/>}
+        {store.error && <ModalError position='center'/>}
         {store.success && <Toast />}
     </section>
 

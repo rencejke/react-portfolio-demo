@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react'
-
-
-import { Link } from 'react-router-dom'
-
-import { ImGift } from 'react-icons/im';
 import UiBanner from './uibanner/UiBanner';
-import Header from '../../../partials/Header';
 import UiHeader from './header/UiHeader';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import UiAbout from './about/UiAbout';
 import UiExperiences from './experiences/UiExperiences';
 import UiProjects from './project/UiProjects';
+import UiCta from './cta/UiCta';
+import UiFooter from './footer/UiFooter';
 
 AOS.init();
 
@@ -51,11 +47,8 @@ const Home = () => {
         <UiAbout />
         <UiExperiences/>
         <UiProjects/>
-      
-   
-
-
-   {/* add here */}
+        <UiCta/>
+        <UiFooter/>
     </div> )
      }
          

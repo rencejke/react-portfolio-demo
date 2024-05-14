@@ -6,8 +6,8 @@ import { PiArchive } from 'react-icons/pi'
 import SpinnerFetching from '../../../../partials/spinners/SpinnerFetching'
 import { StoreContext } from '../../../../../store/StoreContext'
 import { setIsActive, setIsAdd, setIsDelete } from '../../../../../store/StoreAction'
-import ModalConfirmedEXP from '../../../../partials/modalsExperiences/ModalConfirmedEXP'
-import ModalDeleteEXP from '../../../../partials/modalsExperiences/ModalDeleteEXP'
+import ModalConfirmed from '../../../../partials/modals/ModalConfirmed'
+import ModalDelete from '../../../../partials/modals/ModalDelete'
 
 const ExpTable = ({setItemEdit, isLoading, isFetching, exp}) => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -99,9 +99,9 @@ const ExpTable = ({setItemEdit, isLoading, isFetching, exp}) => {
                     </table>
                 </div>
 
-                {store.isActive && <ModalConfirmedEXP position="center"  queryKey="exp" endpoint={`/v1/exp/active/${id}`} isArchiving={isArchiving}/>}
+                {store.isActive && <ModalConfirmed position="center"  queryKey="exp" endpoint={`/v1/exp/active/${id}`} isArchiving={isArchiving}/>}
 
-                {store.isDelete && <ModalDeleteEXP position="center"  queryKey="exp" endpoint={`/v1/exp/${id}`} />} 
+                {store.isDelete && <ModalDelete position="center"  queryKey="exp" endpoint={`/v1/exp/${id}`} />} 
     </>
   )
 }

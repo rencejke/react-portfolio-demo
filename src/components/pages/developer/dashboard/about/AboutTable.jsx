@@ -7,7 +7,7 @@ import SpinnerFetching from '../../../../partials/spinners/SpinnerFetching'
 import ModalDelete from '../../../../partials/modals/ModalDelete'
 import { StoreContext } from '../../../../../store/StoreContext'
 import { setIsActive, setIsAdd, setIsDelete } from '../../../../../store/StoreAction'
-import ModalAboutConfirmed from '../../../../partials/modalsAbout/ModalAboutConfirmed'
+import ModalConfirmed from '../../../../partials/modals/ModalConfirmed'
 
 
 const AboutTable = ({setItemEdit, isLoading, isFetching, about}) => {
@@ -107,7 +107,7 @@ const AboutTable = ({setItemEdit, isLoading, isFetching, about}) => {
                     </table>
                 </div>
 
-                {store.isActive && <ModalAboutConfirmed position="center"  queryKey="about" endpoint={`/v1/about/active/${id}`} isArchiving={isArchiving}/>}
+                {store.isActive && <ModalConfirmed position="center"  queryKey="about" endpoint={`/v1/about/active/${id}`} isArchiving={isArchiving}/>}
 
                 {store.isDelete && <ModalDelete position="center"  queryKey="about" endpoint={`/v1/about/${id}`} />} 
     </>

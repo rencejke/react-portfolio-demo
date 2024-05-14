@@ -6,8 +6,8 @@ import { PiArchive } from 'react-icons/pi'
 import SpinnerFetching from '../../../../partials/spinners/SpinnerFetching'
 import { StoreContext } from '../../../../../store/StoreContext'
 import { setIsActive, setIsAdd, setIsDelete } from '../../../../../store/StoreAction'
-import ModalServicesConfirmed from '../../../../partials/modalServices/ModalServicesConfirmed'
-import ModalDeleteServices from '../../../../partials/modalServices/ModalDeleteServices'
+import ModalConfirmed from '../../../../partials/modals/ModalConfirmed'
+import ModalDelete from '../../../../partials/modals/ModalDelete'
 
 const ServicesTable = ({setItemEdit, isLoading, isFetching, services}) => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -104,9 +104,9 @@ const ServicesTable = ({setItemEdit, isLoading, isFetching, services}) => {
                     </table>
                 </div>
 
-                {store.isActive && <ModalServicesConfirmed position="center"  queryKey="services" endpoint={`/v1/services/active/${id}`} isArchiving={isArchiving}/>}
+                {store.isActive && <ModalConfirmed position="center"  queryKey="services" endpoint={`/v1/services/active/${id}`} isArchiving={isArchiving}/>}
 
-                {store.isDelete && <ModalDeleteServices position="center"  queryKey="services" endpoint={`/v1/services/${id}`} />} 
+                {store.isDelete && <ModalDelete position="center"  queryKey="services" endpoint={`/v1/services/${id}`} />} 
     </>
   )
 }

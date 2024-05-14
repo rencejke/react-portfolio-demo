@@ -6,8 +6,8 @@ import { PiArchive } from 'react-icons/pi'
 import SpinnerFetching from '../../../../partials/spinners/SpinnerFetching'
 import { StoreContext } from '../../../../../store/StoreContext'
 import { setIsActive, setIsAdd, setIsDelete } from '../../../../../store/StoreAction'
-import ModalDeleteContact from '../../../../partials/modalsContact/ModalDeleteContact'
-import ModalConfirmedContact from '../../../../partials/modalsContact/ModalConfirmedContact'
+import ModalConfirmed from '../../../../partials/modals/ModalConfirmed'
+import ModalDelete from '../../../../partials/modals/ModalDelete'
 
 const ContactTable = ({setItemEdit, isLoading, isFetching, contact}) => {
     const {store, dispatch} = React.useContext(StoreContext)
@@ -104,9 +104,9 @@ const ContactTable = ({setItemEdit, isLoading, isFetching, contact}) => {
                     </table>
                 </div>
 
-                {store.isActive && <ModalConfirmedContact position="center"  queryKey="contact" endpoint={`/v1/contact/active/${id}`} isArchiving={isArchiving}/>}
+                {store.isActive && <ModalConfirmed position="center"  queryKey="contact" endpoint={`/v1/contact/active/${id}`} isArchiving={isArchiving}/>}
 
-                {store.isDelete && <ModalDeleteContact position="center"  queryKey="contact" endpoint={`/v1/contact/${id}`} />} 
+                {store.isDelete && <ModalDelete position="center"  queryKey="contact" endpoint={`/v1/contact/${id}`} />} 
     </>
   )
 }

@@ -7,6 +7,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { BiLogoGmail } from 'react-icons/bi';
+import { devBaseImgUrl } from '../../../../helpers/functions-general';
 
 const UiBanner = () => {
 
@@ -36,7 +37,7 @@ const UiBanner = () => {
           
           {banner?.data.map((item, key) => (
              item.banner_is_active === 1 && (
-           <div className="container grid md:grid-cols-2 grid-cols-1 gap-5 font-regular">
+           <div className="container grid md:grid-cols-2 grid-cols-1 gap-5 font-regular"  key={key}>
           <div className='text self-center' key={key}>
             <h1 className='font-regular text-[25px]' data-aos="fade-right" data-aos-duration="1000">{item.banner_title_1}</h1>
             <h1 className='font-bold font-thicker' data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000">{item.banner_title_2}</h1>
@@ -46,7 +47,7 @@ const UiBanner = () => {
            </div>
         
            <div className='image self-center' data-aos="fade-left"  data-aos-duration="1000">
-            <img src={item.banner_image} alt="" className='size-[86%] object-contain hidden md:block '/>
+            <img src={`${devBaseImgUrl}/${item.banner_image}`} alt="" className='size-[86%] object-contain hidden md:block '/>
            </div>
 
            <div className='absolute  md:right-[31vh] md:bottom-[30vh] top-[50vh]'>

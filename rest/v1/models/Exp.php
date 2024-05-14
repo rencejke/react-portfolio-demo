@@ -29,6 +29,7 @@ Class Exp {
             $sql .= "exp_created, ";
             $sql .= "exp_datetime ) values ( ";
             $sql .= ":exp_image, ";
+            $sql .= ":exp_image_animation, ";
             $sql .= ":exp_is_active, ";
             $sql .= ":exp_created, ";
             $sql .= ":exp_datetime ) ";
